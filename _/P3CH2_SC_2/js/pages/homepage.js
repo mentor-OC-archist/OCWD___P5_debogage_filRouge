@@ -2,7 +2,7 @@ const $sensorsWrapper = document.querySelector('.sensors-wrapper')
 
 const ITEMS_PER_PAGE = 8
 
-const retrieveSensorsData = () => fetch('/data/homepage-data.json')
+const retrieveSensorsData = () => fetch('../data/homepage-data.json')
     .then(res => res.json())
     .then(data => data.facades)
     .catch(err => console.log("Oh no", err))
@@ -13,7 +13,7 @@ const createSensorCardImg = sensor => {
 
     $sensorImg.classList.add('sensor-img')
 
-    $sensorImg.setAttribute('src', `/assets/${sensor.img}`)
+    $sensorImg.setAttribute('src', `../assets/${sensor.img}`)
     $sensorImg.setAttribute('alt', `Capteur numéro ${sensor.id}`)
 
     return $sensorImg

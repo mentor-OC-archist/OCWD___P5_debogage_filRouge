@@ -22,7 +22,7 @@ const $weatherCloudcover = document.querySelector('.weather-cloudcover')
 const $weatherUVIndex = document.querySelector('.weather-uv-index')
 const $weatherIsDay = document.querySelector('.weather-is-day')
 
-const retrieveSensorData = () => fetch('/data/facade-detail-data.json')
+const retrieveSensorData = () => fetch('../data/facade-detail-data.json')
     .then(res => res.json())
     .then(data => data.facade)
     .catch(err => console.log("Oh no", err))
@@ -65,7 +65,7 @@ const fillWeatherForecastTable = weatherForecastData => {
 
 const handleSensorImagesGallery = sensorData => {
     // By default take the first element of the array
-    $sensorMainImg.setAttribute('src', `/assets/${sensorData.medias[0]}`)
+    $sensorMainImg.setAttribute('src', `../assets/${sensorData.medias[0]}`)
 }
 
 
